@@ -6,8 +6,16 @@ public class Main {
     	//l.listRep("/home/deptinfo/Bureau/Arduino");
     	//l.listRepTot("/home/deptinfo/Bureau/Arduino/TP_Arduino");
     	
-    	String dir = "/home/deptinfo/Bureau/Arduino";
-		String ext = ".ino";
-		//listRepFiltr(dir, ext);
+    	
+    	//Classe interne nommée
+    	//String dir = "/home/deptinfo/Bureau/Arduino";
+		//String ext = ".ino";
+		//l.listRepFiltr(dir, ext); //Affiche répertoire + .ino
+		
+    	
+    	//Classe externe
+    	//String dir = "/home/deptinfo/Bureau/Arduino";
+		//String ext = ".ino";
+		//l.listRepFiltrExt(dir, ext);
     }
 }

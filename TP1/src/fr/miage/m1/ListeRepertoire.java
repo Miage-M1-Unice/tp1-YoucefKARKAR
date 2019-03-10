@@ -73,4 +73,24 @@ public class ListeRepertoire {
             }
         }
 	}
+	
+	
+	/********** Exercice 3 -- Classe Interne nommée**********/
+	public static void listRepFiltrExt(String repertoire, String mask){
+        File rep = new File(repertoire); //Creation repertoire type File
+        File[] lister = rep.listFiles(new MyFiltre(mask));
+
+        if (lister != null) { //On affiche le tableau créé si il a pu se créer
+            for (int i = 0; i < lister.length; i++) {
+            	if(lister[i].isDirectory()) {
+            		//System.out.println(lister[i].getName()); //Lister répertoire
+            		//System.out.println(); //Saut de ligne
+            		listRepFiltrExt(lister[i].getAbsolutePath(),mask); //Rappel de fonction
+            	}
+            	else {
+            		System.out.println(lister[i].getName()); //Lister fichier
+            	}
+            }
+        }
+	}
 }
